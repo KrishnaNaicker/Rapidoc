@@ -1,66 +1,59 @@
-# Frontend-RAG
+# Rapidoc
 
-🚀 **Modern Web Interface for AI-Powered Document Intelligence**
+🌐 **Official Website & Landing Page for AI Document Intelligence System**
 
-A sleek, responsive frontend application that provides an intuitive interface for the RAG 2.0 document processing system. Built with vanilla JavaScript, HTML5, and CSS3 with stunning animations and glassmorphism design.
+A stunning, interactive website that showcases the Rapidoc AI-powered document processing system. Built with modern web technologies featuring beautiful animations, glassmorphism design, and comprehensive information about the RAG 2.0 backend capabilities.
 
 ## 🎯 Overview
 
-Frontend-RAG serves as the user-facing interface for the RAG (Retrieval Augmented Generation) system. It allows users to upload documents, ask natural language questions, and receive AI-generated answers based on document content through a beautiful, interactive web interface.
+Rapidoc is the official marketing and informational website that introduces users to the AI document intelligence system. It explains how the technology works, demonstrates capabilities, and provides information about the RAG 2.0 backend system that powers the document processing.
 
 ## ✨ Features
 
-- **🎨 Modern UI/UX**: Glassmorphism design with animated backgrounds
-- **📁 Multi-format Support**: Upload PDF, DOCX, XLSX, TXT, CSV files
-- **💬 Interactive Chat**: Natural language query interface
-- **⚡ Real-time Processing**: Live status updates and animations
-- **📱 Responsive Design**: Works seamlessly across all devices
-- **🎭 Animated Logo**: Custom SVG logo with document processing animations
-- **🔄 Dynamic Feedback**: Visual processing indicators and typing animations
+- **🎨 Stunning Visual Design**: Glassmorphism UI with neural network animations
+- **📖 Technology Showcase**: Explains how RAG 2.0 system works
+- **🎭 Custom Animated Logo**: SVG logo representing rapid document processing
+- **📱 Responsive Layout**: Perfect viewing across all devices
+- **⚡ Interactive Elements**: Engaging animations and hover effects
+- **🔍 Feature Demonstrations**: Visual explanations of AI capabilities
+- **📋 System Information**: Technical details about backend integration
 
 ## 🏗️ Architecture
 
 ```
-Frontend-RAG (This Repo)
-    ↓ HTTP Requests
-RAG 2.0 Backend (Gradio API)
-    ↓ AI Processing
-Document Intelligence Response
+Rapidoc Website (This Repo)
+    ↓ Showcases & Explains
+RAG 2.0 Backend System
+    ↓ Provides AI Intelligence
+Document Processing Capabilities
 ```
 
-### How Frontend Connects to Backend
+### Relationship with Backend
 
-The frontend communicates with the **RAG 2.0** backend through RESTful API calls:
+This website serves as the **front door** to the RAG 2.0 ecosystem:
 
-1. **Document Upload**: Sends files to `/upload` endpoint
-2. **Query Processing**: Posts questions to `/query` endpoint
-3. **Status Updates**: Polls backend for processing status
-4. **Response Handling**: Receives and displays AI-generated answers
+1. **Information Hub**: Explains what RAG 2.0 can do
+2. **Technology Showcase**: Demonstrates AI document processing
+3. **Feature Overview**: Details system capabilities and benefits
+4. **Backend Integration Guide**: Shows how to connect to RAG 2.0
+5. **Visual Demonstrations**: Interactive examples of document intelligence
 
 ## 🚀 Quick Start
 
 ### Prerequisites
 
 - Modern web browser (Chrome, Firefox, Safari, Edge)
-- Access to RAG 2.0 backend system
 - Basic web server (optional, for local development)
 
 ### Installation
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/[your-username]/frontend-rag.git
-   cd frontend-rag
+   git clone https://github.com/[your-username]/rapidoc.git
+   cd rapidoc
    ```
 
-2. **Configure backend connection**
-   - Open `script.js`
-   - Update the `API_BASE_URL` variable with your RAG 2.0 backend URL
-   ```javascript
-   const API_BASE_URL = 'http://localhost:7860'; // Your RAG 2.0 backend URL
-   ```
-
-3. **Serve the application**
+2. **Serve the website**
    ```bash
    # Option 1: Simple HTTP server
    python -m http.server 8000
@@ -71,38 +64,38 @@ The frontend communicates with the **RAG 2.0** backend through RESTful API calls
    # Option 3: Just open index.html in browser
    ```
 
-4. **Access the application**
+3. **Access the website**
    - Open `http://localhost:8000` in your browser
    - Or directly open `index.html` file
 
 ## 📁 Project Structure
 
 ```
-frontend-rag/
-├── index.html          # Main HTML structure
+rapidoc/
+├── index.html          # Main website structure
 ├── style.css           # Styling and animations
-├── script.js           # Frontend logic and API integration
+├── script.js           # Interactive elements and animations
 ├── assets/            
+│   ├── images/         # Website images and graphics
 │   └── logo/           # Custom animated SVG logo
 └── README.md          # This file
 ```
 
-## 🔗 Backend Integration
+## 🔗 Backend System
 
-This frontend is designed to work with the **RAG 2.0** backend system. Make sure you have the backend running before using this interface.
-
-### Required Backend Endpoints
-
-The frontend expects these API endpoints from RAG 2.0:
-
-- `POST /upload` - Document upload
-- `POST /query` - Question processing
-- `GET /status` - Processing status
-- `GET /health` - System health check
+This website showcases the **RAG 2.0** system capabilities. To actually use the document processing features, you'll need the backend system running.
 
 ### Backend Repository
 
-👉 **Backend System**: [RAG 2.0](https://github.com/[your-username]/RAG-2.0)
+👉 **AI Backend**: [RAG 2.0](https://github.com/[your-username]/RAG-2.0)
+
+### What RAG 2.0 Provides
+
+- Document parsing and analysis
+- AI-powered question answering
+- Semantic search capabilities
+- RESTful API for integration
+- Gradio web interface for direct access
 
 ## 🎨 Customization
 
@@ -111,27 +104,25 @@ The animated logo is embedded as SVG in the HTML. To modify:
 1. Edit the SVG code in `index.html` (logo-icon section)
 2. Adjust animations, colors, or shapes as needed
 
-### Styling
+### Styling & Branding
 - **Colors**: Modify CSS variables in `style.css`
 - **Animations**: Adjust keyframes and transitions
-- **Layout**: Responsive grid system easily customizable
+- **Content**: Update text and descriptions in `index.html`
+- **Graphics**: Replace or modify visual elements
 
-### API Configuration
-Update `script.js` to match your backend configuration:
-```javascript
-const config = {
-    API_BASE_URL: 'your-backend-url',
-    MAX_FILE_SIZE: 10 * 1024 * 1024, // 10MB
-    SUPPORTED_FORMATS: ['.pdf', '.docx', '.xlsx', '.txt', '.csv']
-};
-```
+### Content Updates
+Update `index.html` to customize:
+- Feature descriptions
+- Technology explanations
+- Contact information
+- Call-to-action buttons
 
 ## 🛠️ Development
 
 ### Local Development
-1. Make sure RAG 2.0 backend is running
-2. Update API endpoints in `script.js`
-3. Use live server for hot reloading during development
+1. Use live server for hot reloading during development
+2. Test across different browsers and devices
+3. Optimize animations for performance
 
 ### Browser Compatibility
 - Chrome 80+
@@ -139,9 +130,23 @@ const config = {
 - Safari 13+
 - Edge 80+
 
+## 🌐 Deployment
+
+### Static Hosting Options
+- **Netlify**: Drag and drop deployment
+- **Vercel**: Git-based deployment
+- **GitHub Pages**: Free hosting for public repos
+- **AWS S3**: Static website hosting
+
+### Deployment Steps
+1. Build and optimize assets
+2. Upload to hosting platform
+3. Configure custom domain (optional)
+4. Set up analytics (optional)
+
 ## 🤝 Contributing
 
-This is a personal project by **Krishna Naicker**. Feel free to fork and customize for your own RAG implementations!
+This is a personal project by **Krishna Naicker**. Feel free to fork and use as inspiration for your own project websites!
 
 ## 📄 License
 
@@ -149,9 +154,9 @@ MIT License - Feel free to use and modify for your projects.
 
 ## 🔗 Related Projects
 
-- **[RAG 2.0](https://github.com/[your-username]/RAG-2.0)** - The AI backend that powers this interface
+- **[RAG 2.0](https://github.com/KrishnaNaicker/RAG-2.0)** - The AI backend system that this website showcases
 - Built with ❤️ by Krishna Naicker
 
 ---
 
-**Note**: This frontend requires the RAG 2.0 backend to be running. Please set up and start the backend system before using this interface.
+**Want to try the system?** Check out the [RAG 2.0](https://github.com/KrishnaNaicker/RAG-2.0) repository to run the actual AI document processing backend that powers this technology showcase.
