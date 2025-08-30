@@ -3,7 +3,7 @@ class LightningRAGFrontend {
         this.currentFile = null;
         this.isProcessing = false;
 
-        // Your HF Space URL (replace with your actual space URL)
+        
         this.backendUrl = 'https://Krishna2908-rag-query-retrival.hf.space';
 
         this.init();
@@ -20,7 +20,6 @@ class LightningRAGFrontend {
 
     async checkBackendConnection() {
         try {
-            // Test connection to HF Space backend
             const response = await fetch(`${this.backendUrl}/`, {
                 method: 'GET',
                 headers: {
@@ -163,7 +162,6 @@ class LightningRAGFrontend {
         this.updateSendButtonState();
 
         try {
-            // Use the FastAPI endpoint directly
             const formData = new FormData();
             formData.append('file', this.currentFile);
             formData.append('question', question);
