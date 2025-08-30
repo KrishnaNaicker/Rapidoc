@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lightning RAG - Document Intelligence</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-container">
+        <div class="neural-network">
+            <canvas id="neural-canvas"></canvas>
+        </div>
+        <div class="gradient-orbs">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="animated-logo">
+                        <defs>
+                            <linearGradient id="docGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#4F46E5;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="speedGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#10B981;stop-opacity:0.8" />
+                                <stop offset="50%" style="stop-color:#34D399;stop-opacity:0.6" />
+                                <stop offset="100%" style="stop-color:#6EE7B7;stop-opacity:0.3" />
+                            </linearGradient>
+                            <filter id="glow">
+                                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                                <feMerge> 
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        <circle cx="100" cy="100" r="95" fill="url(#docGradient)" opacity="0.1"/>
+                        <g transform="translate(60, 50)">
+                            <rect x="8" y="8" width="64" height="80" rx="8" fill="url(#docGradient)" opacity="0.4"/>
+                            <rect x="4" y="4" width="64" height="80" rx="8" fill="url(#docGradient)" opacity="0.7"/>
+                            <rect x="0" y="0" width="64" height="80" rx="8" fill="url(#docGradient)" stroke="#ffffff" stroke-width="2"/>
+                            <rect x="8" y="12" width="48" height="3" rx="1.5" fill="#ffffff" opacity="0.9"/>
+                            <rect x="8" y="20" width="40" height="3" rx="1.5" fill="#ffffff" opacity="0.7"/>
+                            <rect x="8" y="28" width="44" height="3" rx="1.5" fill="#ffffff" opacity="0.7"/>
+                            <rect x="8" y="36" width="36" height="3" rx="1.5" fill="#ffffff" opacity="0.7"/>
+                            <rect x="8" y="44" width="42" height="3" rx="1.5" fill="#ffffff" opacity="0.7"/>
+                            <rect x="8" y="52" width="38" height="3" rx="1.5" fill="#ffffff" opacity="0.7"/>
+                        </g>
+                        <g transform="translate(140, 70)">
+                            <rect x="0" y="0" width="40" height="4" rx="2" fill="url(#speedGradient)" filter="url(#glow)">
+                                <animate attributeName="width" values="20;50;20" dur="1.5s" repeatCount="indefinite"/>
+                                <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite"/>
+                            </rect>
+                            <rect x="0" y="12" width="35" height="3" rx="1.5" fill="url(#speedGradient)" filter="url(#glow)">
+                                <animate attributeName="width" values="15;45;15" dur="1.8s" repeatCount="indefinite"/>
+                                <animate attributeName="opacity" values="0.2;0.8;0.2" dur="1.8s" repeatCount="indefinite"/>
+                            </rect>
+                            <rect x="0" y="22" width="30" height="3" rx="1.5" fill="url(#speedGradient)" filter="url(#glow)">
+                                <animate attributeName="width" values="10;40;10" dur="2.1s" repeatCount="indefinite"/>
+                                <animate attributeName="opacity" values="0.1;0.6;0.1" dur="2.1s" repeatCount="indefinite"/>
+                            </rect>
+                            <rect x="0" y="32" width="38" height="3" rx="1.5" fill="url(#speedGradient)" filter="url(#glow)">
+                                <animate attributeName="width" values="18;48;18" dur="1.6s" repeatCount="indefinite"/>
+                                <animate attributeName="opacity" values="0.25;0.9;0.25" dur="1.6s" repeatCount="indefinite"/>
+                            </rect>
+                            <rect x="0" y="42" width="25" height="3" rx="1.5" fill="url(#speedGradient)" filter="url(#glow)">
+                                <animate attributeName="width" values="8;35;8" dur="1.9s" repeatCount="indefinite"/>
+                                <animate attributeName="opacity" values="0.15;0.7;0.15" dur="1.9s" repeatCount="indefinite"/>
+                            </rect>
+                        </g>
+                        <g transform="translate(100, 140)">
+                            <circle cx="0" cy="0" r="20" fill="none" stroke="url(#speedGradient)" stroke-width="3" stroke-dasharray="15 10" filter="url(#glow)">
+                                <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0" to="360" dur="3s" repeatCount="indefinite"/>
+                            </circle>
+                            <circle cx="0" cy="0" r="6" fill="#10B981" filter="url(#glow)">
+                                <animate attributeName="r" values="4;8;4" dur="2s" repeatCount="indefinite"/>
+                                <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+                            </circle>
+                        </g>
+                        <g transform="translate(130, 90)">
+                            <path d="M0,0 L20,0 L15,-5 M20,0 L15,5" stroke="#10B981" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+                                <animate attributeName="opacity" values="0.4;1;0.4" dur="1.2s" repeatCount="indefinite"/>
+                            </path>
+                        </g>
+                        <g>
+                            <circle cx="45" cy="95" r="2" fill="#34D399">
+                                <animate attributeName="cx" values="45;155;45" dur="2.5s" repeatCount="indefinite"/>
+                                <animate attributeName="opacity" values="0;1;0" dur="2.5s" repeatCount="indefinite"/>
+                            </circle>
+                            <circle cx="50" cy="105" r="1.5" fill="#6EE7B7">
+                                <animate attributeName="cx" values="50;160;50" dur="3s" repeatCount="indefinite"/>
+                                <animate attributeName="opacity" values="0;0.8;0" dur="3s" repeatCount="indefinite"/>
+                            </circle>
+                            <circle cx="42" cy="115" r="1.8" fill="#10B981">
+                                <animate attributeName="cx" values="42;152;42" dur="2.8s" repeatCount="indefinite"/>
+                                <animate attributeName="opacity" values="0;0.9;0" dur="2.8s" repeatCount="indefinite"/>
+                            </circle>
+                        </g>
+                    </svg>
+                </div>
+                <h1>Rapi•Doc</h1>
+            </div>
+            <p class="subtitle">AI-driven retrieval augmented generation system</p>
+            <p class="tagline">Every document becomes searchable intelligence</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="upload-section">
+                <div class="upload-card" id="uploadCard">
+                    <div class="upload-icon">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <div class="upload-text">
+                        <h3>Upload Your Document</h3>
+                        <p>Supports PDF, DOCX, XLSX, TXT, CSV files</p>
+                        <p class="drag-text">Drag & drop files here or click to browse</p>
+                    </div>
+                    <input type="file" id="fileInput" accept=".pdf,.docx,.doc,.xlsx,.xls,.txt,.csv" hidden>
+                    <button class="upload-btn" id="uploadBtn">
+                        <i class="fas fa-plus"></i>
+                        Choose File
+                    </button>
+                    <div class="file-info" id="fileInfo" style="display: none;">
+                        <div class="file-details">
+                            <i class="fas fa-file-alt"></i>
+                            <span id="fileName"></span>
+                            <button class="remove-file" id="removeFile">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="query-section">
+                <div class="query-card">
+                    <div class="query-header">
+                        <h3>Ask Your Question</h3>
+                        <div class="status-indicator" id="statusIndicator">
+                            <div class="status-dot"></div>
+                            <span>Ready</span>
+                        </div>
+                    </div>
+                    
+                    <div class="query-input-container">
+                        <textarea 
+                            id="questionInput" 
+                            placeholder="What would you like to know about your document?"
+                            rows="3"
+                        ></textarea>
+                        <button class="send-btn" id="sendBtn" disabled>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+
+                    <div class="suggested-questions" id="suggestedQuestions">
+                        <h4>Suggested Questions:</h4>
+                        <div class="question-pills">
+                            <button class="question-pill">What is this document about?</button>
+                            <button class="question-pill">What are the key points?</button>
+                            <button class="question-pill">Who are the stakeholders?</button>
+                            <button class="question-pill">What are the requirements?</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="response-section" id="responseSection" style="display: none;">
+                <div class="response-card">
+                    <div class="response-header">
+                        <h3>Answer</h3>
+                        <div class="response-actions">
+                            <button class="copy-btn" id="copyBtn" title="Copy to clipboard">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                            <button class="clear-btn" id="clearBtn" title="Clear conversation">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="response-content" id="responseContent">
+                        <div class="typing-indicator" id="typingIndicator">
+                            <div class="typing-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <span>Processing...</span>
+                        </div>
+                        <div class="answer-text" id="answerText"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Built with AI Document Intelligence • Developed by Krishna Naicker</p>
+        </footer>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="lightning-loader">
+                <div class="lightning-bolt">
+                    <i class="fas fa-bolt"></i>
+                </div>
+            </div>
+            <h3>Processing Document</h3>
+            <p id="loadingText">Extracting content and building index...</p>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
