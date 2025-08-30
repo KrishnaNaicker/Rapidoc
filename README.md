@@ -75,10 +75,7 @@ rapidoc/
 ├── index.html          # Main website structure
 ├── style.css           # Styling and animations
 ├── script.js           # Interactive elements and animations
-├── assets/            
-│   ├── images/         # Website images and graphics
-│   └── logo/           # Custom animated SVG logo
-└── README.md          # This file
+└── README.md           # This file
 ```
 
 ## 🔗 Backend System
