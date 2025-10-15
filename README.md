@@ -49,7 +49,7 @@ This website serves as the **front door** to the RAG 2.0 ecosystem:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/[your-username]/rapidoc.git
+   git clone https://github.com/KrishnaNaicker/rapidoc.git
    cd rapidoc
    ```
 
@@ -84,7 +84,7 @@ This website showcases the **RAG 2.0** system capabilities. To actually use the 
 
 ### Backend Repository
 
-👉 **AI Backend**: [RAG 2.0](https://github.com/[your-username]/RAG-2.0)
+👉 **AI Backend**: [RAG 2.0](https://github.com/KrishnaNaicker/RAG-2.0)
 
 ### What RAG 2.0 Provides
 
@@ -143,7 +143,7 @@ Update `index.html` to customize:
 
 ## 🤝 Contributing
 
-This is a personal project by **Krishna Naicker**. Feel free to fork and use as inspiration for your own project websites!
+This is a project by **Krishna Naicker and Ruchir Kalokhe**. Feel free to fork and use as inspiration for your own project websites!
 
 ## 📄 License
 
@@ -152,7 +152,7 @@ MIT License - Feel free to use and modify for your projects.
 ## 🔗 Related Projects
 
 - **[RAG 2.0](https://github.com/KrishnaNaicker/RAG-2.0)** - The AI backend system that this website showcases
-- Built with ❤️ by Krishna Naicker
+- Built with ❤️ by Krishna Naicker and Ruchir Kalokhe
 
 ---
 
