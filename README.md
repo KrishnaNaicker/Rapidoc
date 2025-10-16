@@ -143,7 +143,7 @@ Update `index.html` to customize:
 
 ## 🤝 Contributing
 
-This is a project by **Krishna Naicker and Ruchir Kalokhe**. Feel free to fork and use as inspiration for your own project websites!
+This is a project by **Krishna Naicker**.Huge thanks to **Ruchir Kalokhe** (https://github.com/ruxir-ig) for thoughtful insights while building. Feel free to fork and use as inspiration for your own project websites!
 
 ## 📄 License
 
@@ -152,7 +152,7 @@ MIT License - Feel free to use and modify for your projects.
 ## 🔗 Related Projects
 
 - **[RAG 2.0](https://github.com/KrishnaNaicker/RAG-2.0)** - The AI backend system that this website showcases
-- Built with ❤️ by Krishna Naicker and Ruchir Kalokhe
+- Built with ❤️ by Krishna Naicker.
 
 ---
 
